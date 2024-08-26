@@ -1,0 +1,528 @@
+/*** Color /***/
+:root {
+  /* Color Theme Variables in Hex */
+  --mclaren-765lt-blue-fog-full-cgi-1: #094A73;
+  --mclaren-765lt-blue-fog-full-cgi-2: #031926;
+  --mclaren-765lt-blue-fog-full-cgi-3: #062A40;
+  --mclaren-765lt-blue-fog-full-cgi-4: #0F698C;
+  --mclaren-765lt-blue-fog-full-cgi-5: #0F758C;
+
+  /* Color Theme Variables in RGBA */
+  --mclaren-765lt-blue-fog-full-cgi-1-rgba: rgba(9, 74, 114, 1);
+  --mclaren-765lt-blue-fog-full-cgi-2-rgba: rgba(3, 24, 38, 1);
+  --mclaren-765lt-blue-fog-full-cgi-3-rgba: rgba(5, 41, 63, 1);
+  --mclaren-765lt-blue-fog-full-cgi-4-rgba: rgba(15, 104, 140, 0.07);
+  --mclaren-765lt-blue-fog-full-cgi-5-rgba: rgba(15, 117, 140, 0.1);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%; /* Assure que les éléments <html> et <body> occupent toute la largeur et hauteur de la fenêtre du navigateur */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background: var(--mclaren-765lt-blue-fog-full-cgi-5-rgba); /* Définit la couleur de fond du corps en utilisant une variable CSS */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none; /* Supprime les contours par défaut des éléments */
+  font-family: "Gilroy-Regular"; /* Définit la police par défaut pour tous les éléments */
+  font-style: normal; /* Assure que le style de police est normal */
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  outline: none; /* Supprime les contours par défaut des liens */
+}
+
+img {
+  max-width: 100%; /* Assure que les images ne débordent pas du conteneur */
+  height: auto; /* Maintient le ratio d'aspect des images */
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  padding-right: 30px; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;  
+  user-select: none;  
+}
+
+/* Contenu Dashboard */
+.dashboard__wrapper {
+  display: flex; /* Utilise flexbox pour la mise en page */
+  align-items: flex-start; /* Aligne les éléments au début de l'axe croisé */
+  justify-content: space-between; /* Espace les éléments également sur l'axe principal */
+  width: 100%; /* Occupe toute la largeur du conteneur */
+}
+/* Contenu Dashboard */
+
+/* Sidebar */
+.left__sidebar {
+  background: #ffffff; /* Couleur de fond de la barre latérale */
+  flex: 0 0 230px; /* Fixe la largeur à 230px et évite la flexibilité */
+  max-width: 230px; /* Largeur maximale de la barre latérale */
+  height: 100vh; /* Hauteur de la barre latérale sur toute la hauteur de la fenêtre */
+  position: fixed; /* Fixe la barre latérale pour qu'elle ne se déplace pas lors du défilement */
+  top: 0; /* Positionne la barre latérale en haut */
+  right: 0; /* Positionne la barre latérale à droite */
+  left: 0; /* Positionne la barre latérale à gauche */
+  bottom: 0; /* Positionne la barre latérale en bas */
+}
+
+.left__sidebar .mobile__nav__top__row {
+  display: none; /* Masque la ligne de navigation mobile */
+}
+
+.left__sidebar .sidebar__header {
+  padding: 30px 0 80px; /* Ajoute de l'espace autour du contenu de l'en-tête de la barre latérale */
+  display: flex; /* Utilise flexbox pour la mise en page de l'en-tête */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.left__sidebar .sidebar__header .logo {
+  max-width: 150px; /* Largeur maximale du logo */
+  flex: 0 0 150px; /* Fixe la largeur à 150px pour le logo */
+  display: flex; /* Utilise flexbox pour la mise en page du logo */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  color: var(--mclaren-765lt-blue-fog-full-cgi-2); /* Couleur du texte du logo */
+  font-size: 35px; /* Taille de la police du logo */
+}
+
+.left__sidebar .sidebar__header .logo img {
+  width: 100%; /* Assure que l'image du logo prend toute la largeur du conteneur */
+  height: auto; /* Maintient le ratio d'aspect de l'image du logo */
+}
+
+.left__sidebar .slidebar__middle ul {
+  list-style: none; /* Supprime les puces des listes */
+  padding: 0; /* Supprime les espacements internes des listes */
+  max-width: 200px; /* Largeur maximale des listes */
+}
+
+.left__sidebar .slidebar__middle ul li {
+  margin: 3px 0; /* Ajoute un espace vertical entre les éléments de la liste */
+}
+
+.left__sidebar .slidebar__middle ul li a {
+  color: #020202; /* Couleur du texte des liens */
+  font-size: 18px; /* Taille de la police des liens */
+  line-height: 16px; /* Hauteur de ligne des liens */
+  font-weight: 600; /* Poids de la police des liens */
+  padding: 20px 40px; /* Espacement interne des liens */
+  display: flex; /* Utilise flexbox pour la mise en page des liens */
+  align-items: center; /* Centre les éléments verticalement dans le lien */
+  cursor: pointer; /* Change le curseur en pointeur lorsqu'on survole le lien */
+  transition: all 0.3s; /* Ajoute une transition douce pour les changements de style */
+  white-space: nowrap; /* Empêche le texte de se casser sur plusieurs lignes */
+}
+
+.left__sidebar .slidebar__middle ul li a .fas {
+  height: 20px; /* Hauteur des icônes dans les liens */
+  width: 20px; /* Largeur des icônes dans les liens */
+  max-width: 20px; /* Largeur maximale des icônes */
+  max-height: 20px; /* Hauteur maximale des icônes */
+  display: -webkit-box; /* Ancienne méthode de flexbox pour les navigateurs Webkit */
+  display: -ms-flexbox; /* Ancienne méthode de flexbox pour les navigateurs IE */
+  display: flex; /* Utilise flexbox pour la mise en page des icônes */
+  align-items: center; /* Centre les icônes verticalement */
+  justify-content: flex-start; /* Aligne les icônes au début du conteneur */
+  color: #1f1f1f; /* Couleur des icônes */
+  opacity: 0.54; /* Opacité des icônes par défaut */
+}
+
+.left__sidebar .slidebar__middle ul li a span {
+  padding-left: 20px; /* Ajoute de l'espace à gauche du texte dans les liens */
+}
+
+.left__sidebar .slidebar__middle ul li a:hover {
+  background: var(--mclaren-765lt-blue-fog-full-cgi-4-rgba); /* Couleur de fond au survol des liens */
+  border-radius: 15px; /* Arrondit les coins des liens */
+  border-top-left-radius: 0; /* Supprime l'arrondi du coin supérieur gauche */
+  border-bottom-left-radius: 0; /* Supprime l'arrondi du coin inférieur gauche */
+  color: var(--mclaren-765lt-blue-fog-full-cgi-2); /* Change la couleur du texte au survol */
+}
+
+.left__sidebar .slidebar__middle ul li a:hover .iconview {
+  opacity: 1; /* Rend les icônes complètement visibles au survol */
+}
+
+.left__sidebar .slidebar__middle ul li a:hover .iconview path {
+  fill: var(--mclaren-765lt-blue-fog-full-cgi-2); /* Change la couleur des icônes au survol */
+}
+
+.left__sidebar .slidebar__middle ul li.active {
+  background: var(--mclaren-765lt-blue-fog-full-cgi-4-rgba); /* Couleur de fond pour les éléments actifs */
+  border-radius: 15px; /* Arrondit les coins des éléments actifs */
+  border-top-left-radius: 0; /* Supprime l'arrondi du coin supérieur gauche pour les éléments actifs */
+  border-bottom-left-radius: 0; /* Supprime l'arrondi du coin inférieur gauche pour les éléments actifs */
+}
+
+.left__sidebar .slidebar__middle ul li.active .iconview {
+  opacity: 1; /* Rend les icônes complètement visibles pour les éléments actifs */
+}
+
+.left__sidebar .slidebar__middle ul li.active .iconview path {
+  fill: var(--mclaren-765lt-blue-fog-full-cgi-2); /* Change la couleur des icônes pour les éléments actifs */
+}
+
+.left__sidebar .slidebar__middle ul li.active a {
+  color: var(--mclaren-765lt-blue-fog-full-cgi-2); /* Change la couleur du texte pour les éléments actifs */
+}
+
+.left__sidebar .slidebar__middle ul.sidebar__list__fixbottom {
+  position: absolute; /* Positionne la liste fixée en bas de la barre latérale */
+  top: 90%; /* Place la liste à 90% de la hauteur de la barre latérale */
+  width: 100%; /* Occupe toute la largeur de la barre latérale */
+  left: 0; /* Aligne la liste à gauche */
+  right: 0; /* Aligne la liste à droite */
+}
+/* Sidebar */
+
+/* Content Area */
+.content__data {
+  flex: 1 1 auto; /* Permet au contenu de s'étendre pour occuper l'espace disponible */
+  margin-left: 230px; /* Décale le contenu pour éviter la superposition avec la barre latérale */
+  padding: 33px 44px; /* Ajoute de l'espace autour du contenu */
+}
+
+.middle__content__row {
+  display: flex; /* Utilise flexbox pour la mise en page */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  width: 100%; /* Occupe toute la largeur disponible */
+}
+
+.middle-section {
+  display: flex; /* Utilise flexbox pour la mise en page */
+  align-items: flex-start; /* Aligne les éléments au début de l'axe croisé */
+  justify-content: space-between; /* Espace les éléments également sur l'axe principal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  background: transparent; /* Fond transparent pour la section */
+  padding: 33px 44px; /* Ajoute de l'espace autour du contenu */
+}
+
+.middle__title__row {
+  display: flex; /* Utilise flexbox pour la mise en page */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: space-between; /* Espace les éléments également sur l'axe principal */
+  width: 100%; /* Occupe toute la largeur disponible */
+  padding-bottom: 48px; /* Ajoute de l'espace en bas de la ligne du titre */
+}
+
+.middle__title__row .title__left__col {
+  display: flex; /* Utilise flexbox pour la mise en page */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: space-between; /* Espace les éléments également sur l'axe principal */
+  flex: 1 1 auto; /* Permet à la colonne de s'étendre pour occuper l'espace disponible */
+  padding-right: 32px; /* Ajoute de l'espace à droite de la colonne */
+}
+
+.middle__title__row .title__left__col .title {
+  font-size: 32px; /* Taille de la police du titre */
+  font-weight: bold; /* Rend le titre en gras */
+  color: #0f2440; /* Couleur du titre */
+}
+
+/* Liste principale des blocs */
+.mainlist__block__row {
+  display: grid; /* Utilise une grille pour la mise en page */
+  grid-template-columns: repeat(4, 1fr); /* Crée une grille avec 4 colonnes égales */
+  gap: 20px; /* Espace entre les cartes de la grille */
+  margin-bottom: 40px; /* Espace en bas de la grille */
+}
+
+.listbox__column {
+  background-color: #fff; /* Couleur de fond des colonnes */
+  border-radius: 8px; /* Arrondit les coins des colonnes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner un effet de profondeur */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition douce pour les effets de survol */
+  cursor: pointer; /* Change le curseur en pointeur lorsqu'on survole les colonnes */
+}
+
+.listbox__column a {
+  color: var(--mclaren-765lt-blue-fog-full-cgi-5);
+}
+
+.listbox__column:hover {
+  transform: translateY(-5px); /* Déplace légèrement les colonnes vers le haut au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Augmente l'ombre portée au survol */
+}
+
+.card {
+  padding: 20px; /* Ajoute de l'espace autour du contenu de la carte */
+  display: flex; /* Utilise flexbox pour la mise en page de la carte */
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+.listicon {
+  font-size: 30px; /* Taille de la police des icônes */
+  color: #333; /* Couleur des icônes */
+  margin-right: 20px; /* Ajoute de l'espace à droite des icônes */
+}
+
+.list__detail {
+  display: flex; /* Utilise flexbox pour la mise en page des détails */
+  flex-direction: column; /* Dispose les détails en colonne */
+  justify-content: center; /* Centre les éléments verticalement */
+}
+
+.listname {
+  font-size: 16px; /* Taille de la police du nom de la liste */
+  font-weight: bold; /* Rend le nom en gras */
+  margin-bottom: 8px; /* Ajoute de l'espace en bas du nom de la liste */
+}
+
+.listcount {
+  font-size: 24px; /* Taille de la police du compteur de la liste */
+  font-weight: 600; /* Poids de la police du compteur */
+  color: #333; /* Couleur du compteur de la liste */
+}
+
+      
+/* Style for the table container */
+
+.whitebox-table {
+  width: 100%; /* Utilisez 100% pour prendre toute la largeur disponible */
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.title {
+  font-size: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  padding: 20px;
+}
+/* Style for the table */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-table thead {
+  background-color: var(--mclaren-765lt-blue-fog-full-cgi-1);
+  color: #fff;
+}
+
+.user-table th, .user-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+  font-weight: 600;
+}
+
+.user-table tbody tr:hover {
+  background-color: var(--mclaren-765lt-blue-fog-full-cgi-4-rgba);
+}
+
+/* Style for action buttons */
+.action-btn {
+  padding: 8px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.archive-btn {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+
+/*Modal*/
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+.open-modal-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.open-modal-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #28a745;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+#errorMessage {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/*************************************/
+tr.admis {
+  color: #05e038; /* Vert clair pour "admis" */
+}
+
+tr.recalé {
+  background-color: #f8d7da; /* Rouge clair pour "recalé" */
+}
+
+tr.encours {
+  background-color: #fff3cd; /* Jaune clair pour "encours" */
+}
+
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #007bff;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+}
+
+.search-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}

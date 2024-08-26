@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    padding: 40px;
+    box-shadow: 5px 5px 5px 10px rgb(88, 88, 88);
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    color: #250e8d;
+    padding: 30px;
+}
+h3{
+    text-align:left;
+    padding: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f4f4f4;
+}
+.action1-btn {
+    position: relative;
+    right:1300px;
+    bottom:300px;
+   
+}
+.action-btn {
+    position: relative;
+    right:300px;
+    bottom:1px;
+    left: 10px;
+    width: 20%;
+  
+}
+
+.action-btn a{
+    text-decoration: none; /* Supprime le soulignement des liens */
+  outline: none; /* Supprime les contours par défaut des liens */
+}
+
+
+
+h1 {
+text-align: center;
+font-size: 24px;
+margin-bottom: 20px;
+color: #333;
+}
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+font-size: 16px;
+color: #555;
+margin-bottom: 5px;
+}
+
+input[type="number"] {
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ddd;
+border-radius: 4px;
+margin-bottom: 15px;
+width: 100%;
+box-sizing: border-box;
+}
+
+.action-btn {
+background-color: #4CAF50;
+color: rgb(12, 12, 12);
+padding: 10px 15px;
+font-size: 16px;
+border: none;
+border-radius: 1px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+width: 100px;
+}
+
+.action-btn:hover {
+background-color: #336134;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #050505;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
